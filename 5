@@ -1,0 +1,20 @@
+#include <iostream> 
+using namespace std;
+int main()
+{
+	setlocale (0, "");
+	char letter;
+	cout << "Введите одну из следующих букв: A, S, D, F, B, R: "; 
+	cin >> letter;
+	switch (letter)
+	{
+	case 'A': cout << "Apple "; break;
+	case 'S': cout << "Summer"; break;
+	case 'D': cout << "Dragon"; break;
+	case 'F': cout << "Forest"; break;
+	case 'B': cout << "Butterfly";break ;
+	case 'R': cout << "Rainbow"; break;
+	default: cout << "ошибка : вы ввели не ту букву ";
+	};
+	return 0;
+}
