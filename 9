@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+int main() {
+    setlocale(0, "");
+    double xn, xk, dx, F;
+    cout << "Введите начальное значение x : ";
+    cin >> xn;
+    cout << "Введите конечное значение x : ";
+    cin >> xk;
+    cout << "Введите шаг : ";
+    cin >> dx;
+    cout << "\nТаблица значений функции F(x):\n";
+    cout << "--------------------------\n";
+    cout << "x |F(x)\n";
+    cout << "--------------------------\n";
+    double x = xn;
+    while (x <= xk) {
+        double  F = -0.7/x*x*x*x-x*x*x+cos(2*x);
+        cout << x << " | " << F << endl;
+        x += dx;
+    }
+    cout << "--------------------------\n";
+
+    return 0;
+}
