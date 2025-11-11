@@ -1,0 +1,31 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	double a,b,c;
+	double x1, x2, x3, y1, y2, y3;
+	double ab;
+	double ab =sqrt((x2-x1)^2-(y2-y1)^2);
+	double bc;
+	double bc = sqrt((x3 - x2) ^ 2 - (y3 - y2) ^ 2);
+	double ca;
+	double ca = sqrt((x3 - x1) ^ 2 - (y3 - y1) ^ 2);
+	double p;
+	double p = (ab + bc + ca) / 3;
+	double s;
+	double s = sqrt(p * (p - ab) * (p - bc) * (p - ca));
+	cout << "Введите координаты A" << endl;
+	cin >> x1;
+	cin >> y1;
+	cout << "Введите координаты B" << endl;
+	cin>>x2;
+	cin>>y2;
+	cout << "Введите координаты C" << endl;
+	cin >> x3;
+	cin>>y3;
+	cout << "Площадь треугольника =" << S << endl;
+	return 0;
+
+}
