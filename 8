@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+double x, y,a,b,r,R,RAD;
+int main()
+{
+    int a = 0;
+    int b = 0;
+    int r = 2;
+    int R = 4;
+    int RAD = 6;
+    setlocale(0, "");
+    cout << "Введите (x,y): "; cin >> x; cin >> y;
+
+    if (((y == -6) || (y == 2)) && (x > -2) && (x < 6))
+    {
+        cout << "Точка на границе";
+    }
+    else if (((x == -2) || (x == 6)) && (y >= -6) && (y <= 2))
+    {
+        cout << "Точка на границе";
+    }
+    else if ((y == 0) && (x >= 4) && (x <= 6))
+    {
+        cout << "Точка на границе";
+    }
+    else if ((x - a) * (x - a) + (y - b) * (y - b) == r * r)
+    {
+        cout << "Точка на границе";
+    }
+    else if (((x - a) * (x - a) + (y - b) * (y - b) == R * R) && (x>=0) && (y<=0))
+    {
+        cout << "Точка на границе";
+    }
+    else if (((x - a) * (x - a) + (y - b) * (y - b) == RAD * RAD) && (x >= 0) && (y <= 0))
+    {
+        cout << "Точка на границе";
+    }
+    else if (x * x + y * y < r * r)
+    {
+        cout << "Не входит";
+    }
+    else if ((x * x + y * y < R * R)&&(x>=0)&&(y<=0))
+    {
+        cout << "Не входит";
+    }
+    else if ((x * x + y * y < RAD * RAD) && (x >= 0) && (y <= 0))
+    {
+        cout << "Не входит";
+    }
+    else
+    {
+        cout << " входит ";
+    }
+
+    return 0;
+}
