@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+int main() {
+    setlocale(0, "");
+    double x, fx, sum = 0.0;
+    int n = 0;
+    cout << "Введите значение x: ";
+    cin >> x;
+    fx = 1.9 + cos(x * x * x - 0.5);
+    if (fx <= 0) {
+        cout << "значение отрицательно. ошибка "<<endl ;
+        return 1;
+    }
+    cout << "f(x) = " << fx << endl;
+    do {
+        n++;
+        sum += 1.0 / n;
+    } while (sum <= fx);
+    cout << "Наименьшее n, равно: " << n << endl;
+    return 0;
+}
